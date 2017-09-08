@@ -1,3 +1,6 @@
+// Ice Cream Icons
+// Make icons for ice cream with just ellipses, triangles, and rectagles
+
 function setup() {
   createCanvas(500, 300);
   background(255);
@@ -10,30 +13,28 @@ function draw() {
 }
 
 function iceCreamOne() {
+  //the background circle
   push();
   fill(0);
   ellipse(80, 135, 150, 150);
   pop();
-  
-  //semi circle to indicate the ice cream
-  //semi circle achived by drawing a circle which half part 
-  //of it is covered by the triangle. 
+
+  //one big scoop of ice cream
   push();
   fill(255);
   noStroke();
   ellipse(80, 100, 50, 50);
   pop();
 
-  //those circles 
+  //smaller ice cream scoops on the sides
   for (var i = 80; i <= 80; i++) {
     smallCircles(i, 102);
   }
 
-  //Cone
+  //the cone
   push();
   noStroke();
   fill(255);
-  // triangle(50, 100, 100, 100, 75, 200);
   triangle(55, 100, 105, 100, 80, 200);
   pop();
 
@@ -46,21 +47,20 @@ function iceCreamOne() {
 }
 
 function iceCreamTwo() {
+  //the background circle
   push();
   fill(0);
   ellipse(240, 138, 150, 150);
   pop();
-  
-  //semi circle to indicate the ice cream
-  //semi circle achived by drawing a circle which half part 
-  //of it is covered by the triangle. 
+
+  //one scoop of ice cream
   push();
   fill(255);
   noStroke();
   ellipse(240, 100, 50, 50);
   pop();
 
-  //Cone
+  //the cone
   push();
   noStroke();
   fill(255);
@@ -74,41 +74,43 @@ function iceCreamTwo() {
   rect(215, 110, 50, 3);
   pop();
 
-  //white lines
+  //white lines for a bit of accent
   for (var i = 214; i <= 214; i++) {
-     blackLine(i, 125);
+    blackLine(i, 125);
   }
 }
 
 function iceCreamThree() {
+  //the background circle
   push();
   fill(0);
   ellipse(400, 138, 150, 150);
   pop();
-  
-  //ice cream
+
+  //ice cream, rectangle shaped
   push();
   fill(255);
   rect(375, 80, 50, 95, 20);
   pop();
 
-  //bite
+  //bitten!
   push();
   fill(0);
   ellipse(380, 90, 30, 30);
   pop();
 
-  //stick
+  //ice cream stick stick
   push();
   fill(255);
   rect(395, 178, 10, 20);
   pop();
 }
 
-function blackLine(x, y) { //these white lines go on the cones
+//the accent lines that goes on the second ice cream
+function blackLine(x, y) { 
   noStroke();
   fill(0);
-  rect(x + 5, y - 7, 35, 3); //rect 1 25 px above rect 2 
+  rect(x + 5, y - 7, 35, 3); //the first line is 5 units above the second line.  
   rect(x, y, 30, 3);
   rect(x - 5, y + 7, 25, 3);
 }
