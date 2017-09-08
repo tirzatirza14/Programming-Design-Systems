@@ -42,7 +42,7 @@ function iceCreamOne() {
   push();
   noStroke();
   fill(0);
-  rect(55, 110, 50, 3);
+  rect(40, 110, 80, 3);
   pop();
 }
 
